@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <noscript>
+    <p>У вас отключен JS</p>
+  </noscript>
+  <p id="p">hello</p>
+
+  <script>
+    
+    // undefined
+    // Null
+    // Boolean
+    // String
+    // Symbol
+    // Number
+    // Object
+    
+    console.log(Number.MAX_SAFE_INTEGER)
+    console.log(undefined, typeof(undefined))
+    console.log(null, typeof(null))
+    console.log(true, typeof(true))
+    console.log('a', typeof('a'))
+    console.log(Symbol('a'), typeof(Symbol('a')))
+    console.log(15, typeof(15))
+    console.log([], typeof([]))
+    
+    a = 'foo'
+    console.log(a)
+    b = 1
+    console.log(b)
+    c = a + b
+    console.log(c)
+    
+    // арифметические операции
+    console.log('Остаток от деления 3%2', 3 % 2)
+    console.log('Возведение в степень 2**2', 2 ** 2)
+    x = 2
+    console.log('Инкремент (увеличение на 1) x++ или ++х', ++x)
+    console.log('Декремент (уменьшение на 1) х-- или -–х', --x)
+    
+
+    // Логические операции
+    x1 = 10
+    x2 = 12
+    console.log('x1 =', x1)
+    console.log('х2 =', x2)
+    console.log('х1 > x2', x1 > x2)
+    console.log('х1 < x2', x1 < x2)
+    // Нестрогие операции сравнения 
+    console.log('3 == "3"', 3 == '3')
+    console.log('3 != "3"', 3 != '3')
+    console.log('1 == true', 1 == true)
+    console.log('0 == false', 0 == false)
+    // Cтрогие операции сравнения 
+    console.log('3 === "3"', 3 === '3')
+    console.log('3 !== "3"', 3 !== '3')
+
+
+    sum = 2+(6/(1+2))
+    /* 
+    Составьте инструкции, вычисляющие и определяющие 
+    типы данных, следующих выражений: 
+     1+true (сумма числового и логического значений),
+    '1'+2 (сумма символьного и числового значений),
+    '1'+false (сумма символьного и логического значений)
+    */
+
+    x = '11.5px'
+    console.log(parseInt(x))
+    console.log(parseFloat(x))
+
+
+    console.log('1+true =', 1+true, ', typeof(1+true) =', typeof(1+true))
+    console.log('"1" + 2 =', "1" + 2, ', typeof("1" + 2) =', typeof("1" + 2))
+    console.log('"1" + false', "1" + false, ', typeof("1" + false) =', typeof("1" + false))
+
+    /* 
+      Задание для самостоятельной работы. Определите, 
+      какие логические операции будут необходимы для составления условий в следующих задачах: 
+      ■ требуется, чтобы при авторизации совпали (с хранимым значением) логин и пароль, 
+      введенные пользователем, но как альтернатива вместо логина может 
+      быть указана электронная почта;
+      ■ для отбора целевой группы социологического опроса нужно выбрать респондентов, возрастом от 30 до 
+      40 лет, имеющих высшее образование и не работающих в банковской сфере
+    */
+
+    
+    // введённыйЛогинИЛИПочта, сохранённыйЛогин, сохранённаяПочта 
+    // введённыйПароль, сохранённыйПароль 
+
+    // (введённыйЛогинИЛИПочта == сохранённаяПочта ИЛИ введённыйЛогинИЛИПочта == сохранённыйЛогин) И введённыйПароль == сохранённыйПароль 
+    // age >= 30 И age<40 И education == 'hight' И work!='bank' 
+    // age >= 30 И age<40 И education == 'hight' И НЕ(work=='bank') 
+
+    // И      &&
+    // ИЛИ    ||
+    // НЕ     !
+
+    // комментарий
+    /* многострочный 
+    комментарий*/
+  </script>
+  <!-- <script src="dist/script.js"></script> -->
+</body>
+</html>
