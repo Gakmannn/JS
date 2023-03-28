@@ -103,10 +103,105 @@
     // ИЛИ    ||
     // НЕ     !
 
+    console.log('Boolean(0)', Boolean(0))
+    console.log('Boolean(1)', Boolean(1)) // любое число не равное 0 будет истиной
+    console.log('Boolean(0.1)', Boolean(0.1)) // любое число не равное 0 будет истиной
+    console.log('Boolean("")', Boolean(''))
+    console.log('Boolean("sd")', Boolean('sd')) // любая не пустая строка будет истиной
+    console.log('Boolean(undefined)', Boolean(undefined))
+    console.log('Boolean(null)', Boolean(null))
+    console.log('Boolean(Symbol("a"))', Boolean(Symbol('a')))
+    console.log('Boolean({})', Boolean({}))
+    console.log('Boolean([])', Boolean([]))
+
+    // alert('fsdfsdsdf')
+    // result = confirm('Are u shure?')
+    // console.log('confirm result',result)
+
+    // if (условие) {
+    //  код, который выполнится, если условие истинно (true)
+    // }
+
+    // if (условие) {
+    //  код, который выполнится, если условие истинно (true)
+    // } else {
+    //  код, который выполнится, если условие ложно (false)
+    // }
+
+    // result = условие ? значение при истинности условия : значение при ложности условия
+    
+    // if (условие) {
+    //  код, который выполнится, если условие истинно (true)
+    // } else if (ещё одно условие) {
+    //  код, который выполнится, если второе условие истинно (true)
+    // } else {
+    //  код, который выполнится, если условие ложно (false)
+    // }
+        
+        
+
+
+    // result = prompt('Input number (not 0)')
+    // if (parseInt(result)) {
+    //   alert('Thanks. Your number ^2 is ' + parseInt(result)**2 )
+    // } else {
+    //   alert('It is not number')
+    // }
+    // console.log('prompt result',result)
+    
+    x = 99
+    parity = ''
+    if (x % 2 == 0) {
+      parity = 'even'
+    } else {
+      parity = 'odd'
+    }
+    console.log('after if', parity)
+    // Тернарный оператор. Его код равносилен коду выше
+    parity = (x % 2 == 0) ? 'even' : 'odd'
+    console.log('after tern', parity)
+    parity = (x % 2 == 0) ? x*10 : x/10
+    console.log('after tern with calc', parity)
+
+    protocol = "ASP"
+    if(protocol == "HTTP") description = "Hypertext transfer protocol"
+    else if(protocol == "HTTPS") description = "Secure hypertext transfer protocol"
+    else if(protocol == "FTP") description = "File transfer protocol"
+    else description = "Unsupported protocol"
+
+    // switch(переменная){
+    //   case первый_вариант_значение_переменной:
+    //     description = "Hypertext transfer protocol"
+    //     break  // Оператор выхода из конструкции switch
+    //   case второй_вариант_значение_переменной:
+    //     description = "Secure hypertext transfer protocol"
+    //     break
+    //   default: // случай, если переменная не равна ни одному из вариантов выше
+    //     description = "Unsupported protocol";
+    // }
+
+    protocol = "HTTPS"
+    switch(protocol){
+      case "HTTP":
+        description = "Hypertext transfer protocol";
+        break;
+      case "HTTPS":
+        description = "Secure hypertext transfer protocol";
+        break;
+      case "FTP":
+        description = "File transfer protocol";
+        break;
+      default :
+        description = "Unsupported protocol";
+    }
+    console.log(protocol, description)
+
+
+
     // комментарий
     /* многострочный 
     комментарий*/
   </script>
-  <!-- <script src="dist/script.js"></script> -->
+  <script src="dist/script.js"></script>
 </body>
 </html>
