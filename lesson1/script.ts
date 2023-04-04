@@ -8,12 +8,12 @@ let p = document.querySelector('#p')
 /* Напишите скрипт, который запрашивает у пользователя подтверждение некоторого действия (используя 
   диалог confirm) и после его ответа выводит сообщение 
   «Подтверждено» или «Отменено».*/
-  /*
-  let result = confirm('Подтвердить?')
-  // let confirmed = result ? 'Подтверждено' : 'Отменено'
-  alert(result ? 'Подтверждено' : 'Отменено')
-  // alert(confirmed)
-  */
+/*
+let result = confirm('Подтвердить?')
+// let confirmed = result ? 'Подтверждено' : 'Отменено'
+alert(result ? 'Подтверждено' : 'Отменено')
+// alert(confirmed)
+*/
 
 // Задание 2
 /*Напишите скрипт, который запрашивает у пользователя пароль подтверждения некоторого действия. 
@@ -21,16 +21,22 @@ let p = document.querySelector('#p')
 и  «JavaScript»). После ввода пароля скрипт должен 
 вывести сообщение «Подтверждено» или «Отменено»
 */
-/*
-let result = prompt('Введите пароль')
-// if (result == 'Step' || result == 'Web' || result == 'JavaScript') {
-  //   alert('Подтверждено')
-  // } else {
-    //   alert('Отменено')
-    // }
-    alert((result == 'Step' || result == 'Web' || result == 'JavaScript') ? 'Подтверждено' : 'Отменено')
-*/
-    // Задание 3
+function checkPassword() {
+  const pass = prompt('Введите пароль')
+  if (pass == 'Step' || pass == 'Web' || pass == 'JavaScript') {
+    return true
+  }
+  return false 
+}
+console.log(`
+##################
+${checkPassword()}
+##################
+
+`)
+
+
+// Задание 3
 /*Напишите скрипт, который запрашивает у пользователя число «х», проверяет его на принадлежность диапазону 0..100 и выводит соответствующее сообщение 
 (например, 10 — принадлежит, –10 — не принадлежит, 
 0 — принадлежит, 200 — не принадлежит)*/
@@ -165,12 +171,51 @@ const arr1 = new Array()
 let i = 0
 while (true) {
   i++
-  if (i==3 || i==5) {
+  if (i == 3 || i == 5) {
     continue // переходит к проверке условия цикла, не выполняя дальнейшие инструкции тела цикла
   }
   console.log(i)
 
-  if (i>10) {
+  if (i > 10) {
     break // прекращение цикла
   }
 }
+
+let variable = 8
+variable = 10
+variable = 15
+console.log('variable', variable)
+
+const constant = 20
+
+const data = variable > 20 ? true : false
+
+// function nameOfFunction(argument1, argument2) {
+//   body
+// }
+
+// function functionWithoutArguments() {
+//   body
+// }
+
+function sum(a: number, b = 10) {
+  return a + b
+}
+function div(a: number, b: number) {
+  if (!b) {
+    return 'на ноль делить нельзя'
+  }
+  return a / b
+}
+function voided() {
+  123
+}
+
+console.log(sum(5, 20))
+console.log(div(10, 2))
+console.log(div(10, 1))
+console.log('voided()', voided())
+console.log('voided', voided)
+let returnOfVoided = voided()
+let sumOf5and20 = sum(5, 20)
+

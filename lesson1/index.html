@@ -11,8 +11,23 @@
     <p>У вас отключен JS</p>
   </noscript>
   <p id="p">hello</p>
+  <p id="Log"></p>
 
   <script>
+    z = 1
+    function incAndLog(x) {
+      // x = x + 1
+      // x++
+      x+=1
+      // alert("inc x = " + x)
+      Log.innerHTML += "<br>inc x = " + x
+      return x
+    }
+    z = incAndLog(z)
+    z = incAndLog(z)
+    z = incAndLog(z)
+    z = incAndLog(z)
+    z = incAndLog(z)
     
     // undefined
     // Null
@@ -206,6 +221,20 @@
     //   console.log('платеж за ' + i + ' месяц', '1000 р')
     //   i = i + 1
     // }
+
+    // X = 10
+    // console.log('X',X)
+    // console.log('window.X',window.X)
+    // var X = 5
+    // console.log('X',X)
+    // console.log('window.X',window.X)
+
+    function show5Blocks() {
+      for(i=1;i<=5;i++) {
+        document.write("<h2> Header "+i+"</h2>")
+      }
+    }
+    show5Blocks()
 
     // комментарий
     /* многострочный 
