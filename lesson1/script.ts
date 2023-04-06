@@ -28,12 +28,12 @@ function checkPassword() {
   }
   return false 
 }
-console.log(`
-##################
-${checkPassword()}
-##################
+// console.log(`
+// ##################
+// ${checkPassword()}
+// ##################
 
-`)
+// `)
 
 
 // Задание 3
@@ -219,3 +219,117 @@ console.log('voided', voided)
 let returnOfVoided = voided()
 let sumOf5and20 = sum(5, 20)
 
+// for (let x=0,y=10; x!=y; x++, y--) {
+//   console.log(`x=${x}, y=${y}, x+y=${x+y}`)
+//   console.log('x='+x+', y='+y)
+// }
+// const name1 = 'Igor'
+// const letter = `Hello, ${name1} 
+// fnlkgfldk sdfsf sdsd fsd
+// ${new Date().toLocaleString()}
+// `
+// const letter2 = 'Hello, ' + name1 + 
+// '\nfnlkgfldk sdfsf sdsd fsd \n' + 
+// new Date().toLocaleString()
+
+
+// console.log(letter)
+// console.log(letter2)
+
+
+// function myFunc (arr) {
+//   console.log(arguments)
+//   const max = Math.max(...arr)
+//   console.log(max)
+// }
+
+// myFunc([1,2,3,5,48,58])
+
+function random(min,max) {
+  return Math.round(Math.random() * (max - min) + min)
+}
+
+// console.log(Math.round(Math.random()*(10-8)+8))
+
+// rand(0-1)*(max - min) + min
+
+// console.log(random(55,80))
+
+function logArguments(x) {
+  console.log(arguments)
+  console.log("x = " + x)
+  // for (i = 0; i < arguments.length; i++) {
+  //   console.log("argument" + i + " = " + arguments[i])
+  // }
+  // получаем индексы объекта
+  for (let i in arguments) {
+    console.log("argument" + i + " = " + arguments[i])
+  }
+  // получаем элементы объекта
+  for (let el of arguments) {
+    console.log(el)
+    // console.log("argument" + i + " = " + arguments[i])
+  }
+}
+
+const arr = [1,2,3,5]
+arr.length
+const arr2 = Array(1,2,3,5)
+
+logArguments(111,1,15)
+
+// function max() {
+//   if (arguments.length == 0) return undefined
+//   let ret = arguments[0]
+//   console.log('ret init', ret)
+//   for (i = 1; i < arguments.length; i++) {
+//     console.log(`ret ${ret}, el ${arguments[i]}`)
+//     if (arguments[i] > ret) {
+//       ret = arguments[i]
+//       console.log(`new ret ${ret}`)
+//     }
+//   }
+//   return ret;
+// }
+
+// console.log(max(12,12,15,18,17,2))
+
+
+let ato1 = 1
+let ato2 = 1
+let ato3 = 1
+let ato4 = 1
+console.log('global', ato1, ato2, ato3, ato4)
+
+if (ato1==ato2) {
+  const ato1 = 2
+  let ato2 = 2
+  let ato3 = 2
+  ato4 = 2
+  ato2 = 7
+  console.log('local if', ato1, ato2, ato3, ato4)
+}
+
+for(let i=0;i<2;i++) {
+  const ato1 = 3
+  let ato2 = 3
+  ato3 = 3
+  let ato4 = 3
+  if (ato4 == 3) {
+    ato3 = 88
+  }
+  console.log('local for', ato1, ato2, ato3, ato4)
+}
+
+function localScope(x) {
+  let ato1 = 10
+  let ato2 = 10
+  let ato3 = 10
+  let ato4 = 10
+  console.log('local func', ato1, ato2, ato3, ato4)
+  return x + ato4
+}
+
+ato1 = localScope(12)
+
+console.log('global', ato1, ato2, ato3, ato4)
