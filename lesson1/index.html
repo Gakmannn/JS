@@ -5,15 +5,81 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    #task_1 input {
+      background: red;
+    }
+  </style>
 </head>
 <body>
   <noscript>
     <p>У вас отключен JS</p>
   </noscript>
+
+  <p>x: <span id="x"></span> y: <span id="y"></span></p>
+
+  <div id="task_1">
+    <h1>Задача 1</h1>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <button>Вычислить</button>
+    <div></div>
+  </div>
+  
+  <div id="task_2">
+    <h1>Задача 2</h1>
+    <input type="text">
+    <input type="text">
+    <button>Вычислить</button>
+    <div></div>
+  </div>
+
   <p id="p">hello</p>
   <p id="Log"></p>
 
   <script>
+
+
+    const input1 = document.querySelectorAll('#task_1 input')
+    const button1 = document.querySelector('#task_1 button')
+    const output1 = document.querySelector('#task_1 div')
+    
+    function concatenate() {
+      let result = ''
+      for (let el of input1) {
+        result += el.value.toString()
+      }
+      output1.innerHTML = `<h3>${result}</h3>`
+    }
+    
+    button1.addEventListener('click', function(e) {
+      console.log(e)
+      logging(concatenate)
+    })
+
+    function logging(func) {
+      context = 'sdfsdsdfsf'
+      console.log('начало вызова функции пользователя ',func.name)
+      func(context)
+      console.log('окончание вызова функции пользователя',func.name)
+    }
+
+    logging(function () {
+      console.log('вызов пользовательской функции')
+    })
+    
+    const xCoord = document.querySelector('#x')
+    const yCoord = document.querySelector('#y')
+    document.addEventListener('mousemove', function(event) {
+      xCoord.innerText = event.clientX
+      yCoord.innerText = event.clientY
+    })
+
     z = 1
     function incAndLog(x) {
       // x = x + 1

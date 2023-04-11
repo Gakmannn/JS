@@ -229,6 +229,7 @@ function logArguments(x) {
 var arr = [1, 2, 3, 5];
 arr.length;
 var arr2 = Array(1, 2, 3, 5);
+// @ts-ignore
 logArguments(111, 1, 15);
 // function max() {
 //   if (arguments.length == 0) return undefined
@@ -277,3 +278,26 @@ function localScope(x) {
 }
 ato1 = localScope(12);
 console.log('global', ato1, ato2, ato3, ato4);
+var dayInWeek = 7;
+var hoursOfStuding = 4;
+hoursOfStuding = 6;
+// Создайте функцию stringFrom(…), возвращающую
+// строку, состоящую из значений всех переданных
+// аргументов.Например, вызов stringFrom('I have', 5,
+// 'apples') вернет строку «I have 5 apples»; 
+// вызов stringFrom('Х value is', true) 
+// вернет строку «Х value is true»
+// const input1 = document.querySelectorAll('#task_1 input')
+// const button1 = document.querySelector('#task_1 button')
+// const output1 = document.querySelector('#task_1 p')
+// function concatenate() {
+//   let result = ''
+//   for (let el of input1) {
+//     result += el.value.toString()
+//   }
+//   output1?.innerText = result
+// }
+// button1?.addEventListener('click', concatenate)
+// if (button1) {
+//   button1.addEventListener('click', concatenate)
+// }
