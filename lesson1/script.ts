@@ -364,3 +364,15 @@ hoursOfStuding = 6
 // if (button1) {
 //   button1.addEventListener('click', concatenate)
 // }
+
+
+let counter = 0
+console.log('counter', counter)
+console.log('counter++', counter++)
+console.log('counter = ', counter)
+console.log('++counter', ++counter)
+console.log('counter = ', counter)
+console.log('counter--', counter--)
+console.log('counter = ', counter)
+console.log('--counter', --counter)
+console.log('counter = ', counter)
