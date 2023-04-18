@@ -311,3 +311,54 @@ console.log('counter--', counter--);
 console.log('counter = ', counter);
 console.log('--counter', --counter);
 console.log('counter = ', counter);
+var word = 'fsdfsdf';
+// @ts-ignore Блокирует ошибки TS
+nonInitiolized = 10 + word;
+// @ts-ignore
+console.log(nonInitiolized);
+// @ts-ignore
+console.log('==', '1', 1, '1' == 1);
+// @ts-ignore
+console.log('===', '1', 1, '1' === 1);
+// @ts-ignore
+console.log('==', null, undefined, null == undefined);
+// @ts-ignore
+console.log('===', null, undefined, null === undefined);
+// @ts-ignore
+console.log('==', [1], [1], [1] == [1]);
+// @ts-ignore
+console.log('===', [], [], [] === []);
+console.log('Я' > 'а');
+console.log('я', 'я'.charCodeAt(0));
+console.log('Я', 'Я'.charCodeAt(0));
+console.log('а', 'а'.charCodeAt(0));
+console.log('А', 'А'.charCodeAt(0));
+if (0)
+    alert('0');
+else if (1)
+    alert('1');
+else if (2)
+    alert('2');
+else if (3)
+    alert('3');
+else
+    alert('');
+var accessAllowed;
+var age = parseInt(prompt('Сколько вам лет?', ''));
+if (age > 18) {
+    accessAllowed = true;
+}
+else {
+    accessAllowed = false;
+}
+// let result = условие ? значение1 : значение2;
+accessAllowed = (age > 18) ? 'dfgdfg' : 16;
+age = parseInt(prompt('Возраст?', "18"));
+var message = (age < 3) ? 'Здравствуй, малыш!' :
+    (age < 18) ? 'Привет!' :
+        (age < 100) ? 'Здравствуйте!' :
+            'Какой необычный возраст!';
+var company = prompt('Какая компания создала JavaScript?', '');
+// Вместо if
+(company == 'Netscape') ? alert('Верно!') : alert('Неправильно.');
+// Не рекомендуется использовать оператор вопросительного знака таким образом.
